@@ -15,3 +15,9 @@
           - djangorestframework
     - name: Iniciando o projeto
       shell: '. /home/ubuntu/tcc/venv/bin/activate; django-admin startproject setup /home/ubuntu/tcc/'
+    - name: Alterando o hosts do settings do django
+      lineinfile:
+        path: /home/ubuntu/tcc/setup/settings.py
+        regexp: 'ALLOWED_HOSTS'
+        line: 'ALLOWED_HOSTS = ["*"]'
+        backrefs: yes                         # Se não achar a string 'ALLOWED_HOST' não mexe no arquivo 
