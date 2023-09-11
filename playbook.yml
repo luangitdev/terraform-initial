@@ -13,3 +13,5 @@
         name:
           - django
           - djangorestframework
+    - name: Iniciando o projeto
+      shell: '. /home/ubuntu/tcc/venv/bin/activate; django-admin startproject setup /home/ubuntu/tcc/'
