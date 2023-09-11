@@ -18,6 +18,6 @@ resource "aws_instance" "app_server" {
   instance_type = "t2.micro"
   key_name = "iac-luan"
   tags = {
-    Name = "Teste AWS 2"
+    Name = "Terraform Ansible Python"
   }
 }
