@@ -15,6 +15,7 @@
           - djangorestframework
     - name: Iniciando o projeto
       shell: '. /home/ubuntu/tcc/venv/bin/activate; django-admin startproject setup /home/ubuntu/tcc/'
+      ignore_erros: yes        # Esse parâmetro vai fazer com que o playbook continue independente do comando ter retornado OK, changed ou fail
     - name: Alterando o hosts do settings do django
       lineinfile:
         path: /home/ubuntu/tcc/setup/settings.py
