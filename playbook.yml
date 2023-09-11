@@ -7,3 +7,9 @@
         - virtualenv
         update_cache: yes        # É semelhante ao apt updade no linux
       become: yes                # Executa os comando como super usuário tipo o sudo.
+    - name: Instalando dependencias com pip (Django e Django Rest)
+      pip:
+        virtualenv: /home/ubuntu/tcc/venv
+        name:
+          - django
+          - djangorestframework
